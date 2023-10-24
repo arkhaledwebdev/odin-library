@@ -32,8 +32,46 @@
             <div class="top-content name">Unread books</div>
         </div>
 
-        <button id="add-button">Add book</button>
+        <button id="add-book-button">Add book</button>
     </div>
+
+    <dialog id="dialog-add-book">
+
+        <form id="form-add-book">
+
+            <div class="form-item">
+                <label for="form-book-name">Book name: </label>
+                <input type="text" name="book-name" id="form-book-name">    
+            </div>
+
+            <div class="form-item">
+                <label for="form-book-author">Author: </label>
+                <input type="text" name="book-author" id="form-book-author">    
+            </div>
+
+            <div class="form-item">
+                <label for="form-book-pages">Pages No.: </label>
+                <input type="text" name="book-pages" id="form-book-pages">   
+            </div>
+
+            <div class="form-item">
+                <label for="form-book-synopsis">Synopsis: </label>
+                <input type="text" name="book-synopsis" id="form-book-synopsis">    
+            </div>
+
+            <div class="form-item" id="checkbox-container">
+                <label for="form-book-readCheck">Have you read it? </label>
+                <input class="checkBox" type="checkbox" name="book-readStatus" id="form-book-readCheck">
+            </div>
+            
+            <div id="form-buttons-container">
+                <button class="button-delete" value="Cancel" formmethod="dialog">Cancel</button>
+                <button class="button-read" id="confirmButton" type="submit" value="default">Confirm</button>
+            </div>
+
+        </form>
+
+    </dialog>
 
     <!-- main-content -->
 

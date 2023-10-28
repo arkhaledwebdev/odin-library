@@ -41,17 +41,17 @@
 
             <div class="form-item">
                 <label for="form-book-name">Book name: </label>
-                <input type="text" name="book-name" id="form-book-name">    
+                <input type="text" name="book-name" id="form-book-name" required>    
             </div>
 
             <div class="form-item">
                 <label for="form-book-author">Author: </label>
-                <input type="text" name="book-author" id="form-book-author">    
+                <input type="text" name="book-author" id="form-book-author" required>    
             </div>
 
             <div class="form-item">
                 <label for="form-book-pages">Pages No.: </label>
-                <input type="text" name="book-pages" id="form-book-pages">   
+                <input type="number" name="book-pages" id="form-book-pages" required>   
             </div>
 
             <div class="form-item">
@@ -65,7 +65,7 @@
             </div>
             
             <div id="form-buttons-container">
-                <button class="button-delete" value="Cancel" formmethod="dialog">Cancel</button>
+                <button class="button-delete" id="cancelButton" value="Cancel" formmethod="dialog">Cancel</button>
                 <button class="button-read" id="confirmButton" type="submit" value="default">Confirm</button>
             </div>
 
@@ -75,9 +75,9 @@
 
     <!-- main-content -->
 
-    <div class="main-content">
+    <div id="main-content">
 
-        <div class="book-item">
+        <!-- <div class="book-item">
             <div class="book-name">Harry Potter and the Half-Blood Prince</div>
             <div class="book-author">
                 <div class="book-author-title">Author: </div>
@@ -92,95 +92,15 @@
                 <div class="book-synopsis-value">As Harry Potter begins his sixth year at Hogwarts,
                     he discovers an old book marked as "the property of the Half-Blood Prince" and begins to learn more about Lord Voldemort's dark past.</div>
             </div>
-            <div class="book-buttons">
-                <button class="button-read">Read</button>
-                <button class="button-delete">Delete</button>
-            </div>
-        </div>
-
-        <div class="book-item">
-            <div class="book-name">Harry Potter and the Half-Blood Prince</div>
-            <div class="book-author">
-                <div class="book-author-title">Author:</div>
-                <div class="book-author-value">J. K. Rowling</div>    
-            </div>
-            <div class="book-pages">
-                <div class="book-pages-title">Pages:</div>
-                <div class="book-pages-value">607</div>
-            </div>
-
-            <div class="book-synopsis">
-                <div class="book-synopsis-title">synopsis: </div>
-                <div class="book-synopsis-value">As Harry Potter begins his sixth year at Hogwarts,
-                    he discovers an old book marked as "the property of the Half-Blood Prince" and begins to learn more about Lord Voldemort's dark past.</div>
-            </div>
             
-            <div class="book-buttons">
-                <button class="button-read">Read</button>
-                <button class="button-delete">Delete</button>
+            <div class="book-footer">
+                <div class="read-status">You have not read this book yet</div>
+                <div class="book-buttons">
+                    <button class="button-read">Read</button>
+                    <button class="button-delete">Delete</button>
+                </div>
             </div>
-        </div>
-
-        <div class="book-item">
-            <div class="book-name">Harry Potter and the Half-Blood Prince</div>
-            <div class="book-author">
-                <div class="book-author-title">Author:</div>
-                <div class="book-author-value">J. K. Rowling</div>    
-            </div>
-            <div class="book-pages">
-                <div class="book-pages-title">Pages:</div>
-                <div class="book-pages-value">607</div>
-            </div>
-            <div class="book-synopsis">
-                <div class="book-synopsis-title">synopsis: </div>
-                <div class="book-synopsis-value">As Harry Potter begins his sixth year at Hogwarts,
-                    he discovers an old book marked as "the property of the Half-Blood Prince" and begins to learn more about Lord Voldemort's dark past.</div>
-            </div>
-            <div class="book-buttons">
-                <button class="button-read">Read</button>
-                <button class="button-delete">Delete</button>
-            </div>
-        </div>
-
-        <div class="book-item">
-            <div class="book-name">Harry Potter and the Half-Blood Prince</div>
-            <div class="book-author">
-                <div class="book-author-title">Author:</div>
-                <div class="book-author-value">J. K. Rowling</div>    
-            </div>
-            <div class="book-pages">
-                <div class="book-pages-title">Pages:</div>
-                <div class="book-pages-value">607</div>
-            </div>
-            <div class="book-synopsis">
-                <div class="book-synopsis-title">synopsis: </div>
-                <div class="book-synopsis-value">none.</div>
-            </div>
-            <div class="book-buttons">
-                <button class="button-read">Read</button>
-                <button class="button-delete">Delete</button>
-            </div>
-        </div>
-
-        <div class="book-item">
-            <div class="book-name">Harry Potter and the Half-Blood Prince</div>
-            <div class="book-author">
-                <div class="book-author-title">Author:</div>
-                <div class="book-author-value">J. K. Rowling</div>    
-            </div>
-            <div class="book-pages">
-                <div class="book-pages-title">Pages:</div>
-                <div class="book-pages-value">607</div>
-            </div>
-            <div class="book-synopsis">
-                <div class="book-synopsis-title">synopsis: </div>
-                <div class="book-synopsis-value">none.</div>
-            </div>
-            <div class="book-buttons">
-                <button class="button-read">Read</button>
-                <button class="button-delete">Delete</button>
-            </div>
-        </div>  
+        </div> -->
 
     </div>
 

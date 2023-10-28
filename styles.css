@@ -162,7 +162,7 @@ img {
 
 /* main content */
 
-.main-content {
+#main-content {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -205,8 +205,22 @@ img {
   flex: 1;
 }
 
+.book-footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
 .book-buttons {
   align-self: end;
+}
+
+.read-status{
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-style: italic;
+  flex: 1;
 }
 
 .button-read,
@@ -214,7 +228,6 @@ img {
   font-size: 1.5rem;
   border-radius: 12px;
   padding: 4px 16px;
-
 }
 
 .button-read {
@@ -286,4 +299,8 @@ img {
   justify-self: center;
   width: 1.5rem;
   height: 1.5rem;
+}
+
+.unread-book {
+  background-color: gray;
 }

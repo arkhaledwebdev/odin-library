@@ -20,12 +20,14 @@ const unReadBooks = document.getElementById('unreadBooks-value');
 
 
 
-function Book(name, author, pages, synopsis, isRead) {
-    this.name = name;
-    this.author = author;
-    this.pages = pages;
-    this.synopsis = synopsis;
-    this.isRead = isRead;
+class Book {
+    constructor(name, author, pages, synopsis, isRead) {
+        this.name = name;
+        this.author = author;
+        this.pages = pages;
+        this.synopsis = synopsis;
+        this.isRead = isRead;
+    }
 };
 
 function addBookToLibrary(book) {
@@ -35,7 +37,7 @@ function addBookToLibrary(book) {
     index++;
 };
 
-function createBookItem(newbook, newIndex) {
+function createBookItem(newBook, newIndex) {
     const newBookItem = document.createElement('div');
     newBookItem.classList.add('book-item');
     newBookItem.dataset.index = newIndex;
@@ -44,7 +46,7 @@ function createBookItem(newbook, newIndex) {
     // book name
     const newBookName = document.createElement('div');
     newBookName.classList.add('book-name');
-    newBookName.textContent = newbook.name;
+    newBookName.textContent = newBook.name;
     newBookItem.appendChild(newBookName);
 
     // book author
@@ -55,7 +57,7 @@ function createBookItem(newbook, newIndex) {
     newAuthorTitle.textContent = "Author: "
     const newAuthorValue = document.createElement('div');
     newAuthorValue.classList.add('book-author-value');
-    newAuthorValue.textContent = newbook.author;
+    newAuthorValue.textContent = newBook.author;
     newBookAuthor.appendChild(newAuthorTitle);
     newBookAuthor.appendChild(newAuthorValue);
     newBookItem.appendChild(newBookAuthor);
@@ -68,7 +70,7 @@ function createBookItem(newbook, newIndex) {
     newPagesTitle.textContent = "Pages: "
     const newPagesValue = document.createElement('div');
     newPagesValue.classList.add('book-pages-value');
-    newPagesValue.textContent = newbook.pages;
+    newPagesValue.textContent = newBook.pages;
     newBookPages.appendChild(newPagesTitle);
     newBookPages.appendChild(newPagesValue);
     newBookItem.appendChild(newBookPages);
@@ -81,7 +83,7 @@ function createBookItem(newbook, newIndex) {
     newSynopsisTitle.textContent = "Synopsis: "
     const newSynopsisValue = document.createElement('div');
     newSynopsisValue.classList.add('book-synopsis-value');
-    newSynopsisValue.textContent = newbook.synopsis;
+    newSynopsisValue.textContent = newBook.synopsis;
     newBookSynopsis.appendChild(newSynopsisTitle);
     newBookSynopsis.appendChild(newSynopsisValue);
     newBookItem.appendChild(newBookSynopsis);
@@ -92,7 +94,7 @@ function createBookItem(newbook, newIndex) {
     const readStatus = document.createElement('div');
     readStatus.classList.add('read-status');
     readStatus.dataset.index = newIndex;
-    console.log(newbook.isRead);
+    console.log(newBook.isRead);
     newBookFooter.appendChild(readStatus);
 
     const newBookButtons = document.createElement('div');
@@ -110,7 +112,7 @@ function createBookItem(newbook, newIndex) {
     newBookFooter.appendChild(newBookButtons);
     newBookItem.appendChild(newBookFooter);
 
-    if (newbook.isRead == true) {
+    if (newBook.isRead == true) {
         readStatus.textContent = 'You have read this book';
         newButtonRead.textContent = "Unread";
         newButtonRead.classList.add('unread-book')
@@ -199,8 +201,6 @@ function calculateBooks() {
     totalBooks.textContent = bookButtons.length - 1;
     readBooks.textContent = readBooksValue;
     unReadBooks.textContent = unReadBooksValue;
-
-
 }
 
 
